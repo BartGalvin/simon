@@ -1,0 +1,244 @@
+body {
+  text-align: center;
+  background-color: beige;
+  font-family: Arial;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  height: 600px;
+  width: 600px;
+  background-color: black;
+  border-radius: 100%;
+  z-index: 1;
+  box-shadow: 0 0 10px 5px grey;
+}
+
+.row {
+  height: 50%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.gamepad {
+  height: 90%;
+  width: 45%;
+  cursor: pointer;
+  box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.6) inset;
+  padding: 0;
+  filter: brightness(60%);
+} 
+
+.active {
+  filter: brightness(100%);
+  box-shadow: 0 0 30px .1px #E9E8E8 inset;
+}
+
+.green {
+  background-color: #00FF00;
+  float: left;
+  border-radius: 100% 0 0 0;
+  margin: 20px 0 0 20px;
+}
+
+.red {
+  background-color: #FE6464;
+  float: right;
+  border-radius: 0 100% 0 0;
+  margin: 20px;
+}
+
+.yellow {
+  background-color: yellow;
+  float: left;
+  border-radius: 0 0 0 100%;
+  margin: 10px 0 0 20px;
+}
+
+.blue {
+  background-color: #76B1FE;
+  float: right;
+  border-radius: 0 0 100% 0;
+  margin: 0 20px 0 0;
+}
+
+.console {
+  background-color: white;
+  z-index: 2;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 49%;
+  left: 49%;
+  margin: -160px;
+  border-radius: 50%;
+  border: 1em black solid;
+  box-shadow: 0 0 100px 3px rgba(0, 0, 0, 0.6) inset;
+}
+
+.console-row {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 33%;
+  position: relative;
+}
+
+.logo {
+  width: 75%;
+  margin-left: 11%;
+  border-radius: 50% 50% 0 0;
+  margin-bottom: -20px;
+  font-family: 'Alfa Slab one';
+  font-size: 36px;
+}
+
+.power {
+  width: 75%;
+  margin-left: 11%;
+  border-radius: 0 0 70% 70%;
+}
+
+.console-col {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  margin-left: 20px;
+  padding: 0;
+  z-index: 3;
+  position: relative;
+}
+
+.display {
+  background-color: black;
+  height: 60%;
+  width: 25%;
+  margin-top: 10px;
+  border-radius: 20%;
+  border: 5px solid gray;
+  color: red;
+  float: left;
+  padding: 0;
+  box-shadow: 0 0 5px 1px gray inset;
+  box-shadow: 0 0 4px 1px black;
+}
+
+.count {
+  margin-top: -1px;
+  font-size: 60px;
+  font-family: 'VT323';
+}
+
+.circ-button {
+  height: 35px;
+  width: 35px;
+  background-color: blue;
+  border-radius: 100%;
+  margin-top: 50%;
+  padding: 0;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.6) inset, 0 0 0 1px black;
+  cursor: pointer;
+}
+
+.circ-button:active{
+  transform: translateY(1px);
+}
+
+
+.strict-indicator {
+  background-color: black;
+  height: 10px;
+  width: 10px;
+  margin-left: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.strict-on {
+  background-color: red;
+}
+
+.strict-button {
+  height: 35px;
+  width: 35px;
+  background-color: yellow;
+  border-radius: 100%;
+  margin-top: 10px;
+  padding: 0;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.6) inset, 0 0 0 1px black;
+}
+
+h3 {
+  margin: 5px;
+  padding: 0;
+  font-size: 16px;
+  margin-left: -20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* the below code for a toggle switch has been adapted from
+https://www.w3schools.com/howto/howto_css_switch.asp
+*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 10%;
+  box-shadow: 0 0 5px .1px black inset;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: black;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border-radius: 20%;
+  box-shadow: 0 0 4px .1px #E9E8E8 inset;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+  
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+span {
+  font-weight: bold;
+  vertical-align: 50%;
+}
